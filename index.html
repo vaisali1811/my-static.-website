@@ -3,67 +3,137 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Magic Words</title>
+  <title>The Magic Words</title>
   <style>
-    body {
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+    * {
       margin: 0;
-      font-family: "Poppins", sans-serif;
-      background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 100vh;
-      color: #333;
+      padding: 40px 20px;
+      color: #222;
+      overflow-x: hidden;
     }
-    .card {
-      background: white;
-      border-radius: 20px;
-      box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
-      padding: 40px;
-      max-width: 500px;
+
+    .container {
+      background: #ffffffee;
+      border-radius: 25px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+      padding: 40px 35px;
+      max-width: 650px;
       text-align: center;
-      transition: transform 0.3s ease;
+      animation: fadeIn 1.2s ease forwards;
+      transform: translateY(20px);
+      opacity: 0;
     }
-    .card:hover {
-      transform: scale(1.03);
+
+    @keyframes fadeIn {
+      from { transform: translateY(40px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
     }
+
     img {
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
+      width: 160px;
+      height: 160px;
       object-fit: cover;
-      margin-bottom: 20px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      border-radius: 50%;
+      border: 4px solid #fff;
+      box-shadow: 0 0 25px rgba(245, 87, 108, 0.6);
+      margin-bottom: 25px;
+      transition: transform 0.4s ease;
     }
+
+    img:hover {
+      transform: rotate(5deg) scale(1.05);
+    }
+
     h1 {
-      font-size: 1.8rem;
-      color: #1a237e;
-      margin-bottom: 10px;
+      font-size: 2.2rem;
+      color: #5c0067;
+      text-shadow: 0 2px 8px rgba(240, 147, 251, 0.3);
+      margin-bottom: 20px;
     }
+
     p {
       font-size: 1.05rem;
-      line-height: 1.7;
       color: #444;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      transition: color 0.3s ease;
     }
+
+    p:hover {
+      color: #000;
+    }
+
+    .highlight {
+      color: #e91e63;
+      font-weight: 600;
+    }
+
     footer {
       margin-top: 25px;
-      font-size: 0.9rem;
-      color: #777;
+      font-size: 0.95rem;
+      color: #555;
+      font-style: italic;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 25px 20px;
+      }
+      h1 {
+        font-size: 1.8rem;
+      }
+      img {
+        width: 130px;
+        height: 130px;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="card">
-    <img src="img.jpeg" alt="Magic Words" />
-    <h1>The Magic Words</h1>
+  <div class="container">
+    <img src="img.jpeg" alt="Magic Words">
+    <h1>The Magic Words ✨</h1>
+
     <p>
-      “Sorry”, “Please”, and “Thank you” — three simple words that carry
-      the power to heal hearts, open doors, and build bridges.  
-      When spoken with sincerity, they remind us that kindness still
-      breathes in our world.  
-      The real magic isn’t in the words themselves, but in the care behind them.
+      Words are not just sounds — they are emotions wrapped in letters. Among all,
+      the <span class="highlight">magic words</span> “Sorry”, “Please”, and “Thank You” hold the
+      power to change hearts and heal wounds.
     </p>
-    <footer>– A Reminder to Speak with Grace ✨</footer>
+
+    <p>
+      A gentle “<span class="highlight">Please</span>” opens doors that strength never could.
+      It turns commands into kindness, and strangers into friends.
+    </p>
+
+    <p>
+      A heartfelt “<span class="highlight">Thank You</span>” carries gratitude that no gift can replace.
+      It reminds us that goodness still exists in small acts of love.
+    </p>
+
+    <p>
+      And a sincere “<span class="highlight">Sorry</span>” is not a sign of weakness —
+      it is the courage to mend what’s broken, and the wisdom to value peace over pride.
+    </p>
+
+    <p>
+      These are not just words; they are small bridges between souls.
+      When spoken with truth, they turn ordinary moments into magical ones.
+    </p>
+
+    <footer>Speak gently. Feel deeply. Use your magic wisely. 🌟</footer>
   </div>
 </body>
 </html>
